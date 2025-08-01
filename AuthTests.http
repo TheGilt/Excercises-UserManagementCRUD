@@ -1,0 +1,10 @@
+### Test: Unauthorized request (no token header)
+GET http://localhost:5001/api/users/1
+
+### Test: Unauthorized request (wrong token)
+GET http://localhost:5001/api/users/1
+X-Api-Token: wrong_password
+
+### Test: Authorized request (correct token)
+GET http://localhost:5001/api/users/1
+X-Api-Token: secret_password
